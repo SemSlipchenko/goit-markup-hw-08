@@ -1,0 +1,188 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    min-width: 528px;
+    min-height: 581px;
+    padding: 40px;
+
+    background-color: var(--background-secondary-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform var(--transition-data);
+
+    &__btn {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            cursor: pointer;
+    
+            color: #000000;
+            background-color: var(--background-secondary-color);
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-data);
+    }
+
+    &__btn:hover &__btn-icon,
+    &__btn:focus &__btn-icon {
+        fill: var(--hover-color);
+    }
+
+    &__btn-icon {
+        width: 11px;
+        height: 11px;
+        transition: fill var(--transition-data);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .btn {
+                margin-top: 30px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--main-color);
+        margin-bottom: 30px;
+    }
+
+    &__field+&__field {
+        margin-top: 28px;
+    }
+
+    &__field {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        & textarea {
+            width: 448px;
+            height: 120px;
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            resize: none;
+            padding: 12px 16px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        & textarea::placeholder {
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+
+        & textarea:focus {
+            border: 1px solid var(--hover-color);
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: -20px;
+    
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: var(--secondary-color);
+    }
+
+    &__input-wrap {
+        position: relative;
+    }
+
+    &__input {
+        width: 448px;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding-left: 42px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__input:hover,
+    &__input:focus {
+        border: 1px solid var(--hover-color);
+    }
+
+    &__input:hover+&__icon,
+    &__input:focus+&__icon {
+        fill: var(--hover-color);
+    }
+
+    &__icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        z-index: 1;
+        pointer-events: none;
+        transition: fill var(--transition-data);
+    }
+
+    &__policy {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--secondary-color);
+
+        & a {
+                color: var(--hover-color);
+        }
+    }
+
+    &__check {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        clip: rect(0 0 0 0);
+    }
+
+    &__icon-check {
+        display: inline-block;
+        margin-right: 8px;
+        height: 15px;
+        width: 16px;
+        border-radius: 2px;
+        border: 2px solid var(--main-color);
+    }
+
+    &__check:checked+&__icon-check {
+        background-image: url('../images/check.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        border: 2px solid transparent;
+    }
+}

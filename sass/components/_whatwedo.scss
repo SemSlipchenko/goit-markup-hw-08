@@ -1,0 +1,33 @@
+.whatwedo {
+    padding-bottom: 94px;
+
+    &__list {
+            display: flex;
+    }
+
+    &__item {
+        position: relative;
+        list-style-type: none;
+        margin-right: 30px;
+    }
+
+    &__text {
+        position: absolute;
+        pointer-events: none;
+        bottom: 0;
+        width: 100%;
+        padding: 27px 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        color: var(--secondary-text-color);
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }
+}

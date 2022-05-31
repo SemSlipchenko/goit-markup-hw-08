@@ -1,0 +1,129 @@
+.footer {
+    background-color: var(--background-color);
+    padding: 60px 0;
+
+    & .container {
+            display: flex;
+    }
+    
+    &__address {
+        margin-right: 70px;
+    }
+
+    &__logo span {
+        color: var(--secondary-text-color);
+    }
+
+    & address {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--secondary-text-color);
+    }
+
+    &__link-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        margin-bottom: 10px;
+    
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
+        transition: color var(--transition-data);
+    }
+
+    &__link:last-child {
+        margin-bottom: 0;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--hover-color);
+    }
+
+    & .social {
+        margin-right: 93px;
+        padding: 10px 0 0 0;
+
+        &__title {
+                margin-bottom: 20px;
+        
+                font-size: 14px;
+                line-height: 1.14;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+        
+                color: var(--secondary-text-color);
+        }
+
+        &__link>&-icon {
+            fill: var(--secondary-text-color);
+        }
+
+    }
+
+}
+
+.mail {
+    padding: 10px 0 0 0;
+
+    &__title {
+            margin-bottom: 20px;
+    
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+    
+            color: var(--secondary-text-color);
+    }
+
+    &__input {
+        width: 358px;
+        height: 50px;
+        padding-left: 16px;
+        margin-right: 10px;
+    
+        color: var(--secondary-text-color);
+        background-color: var(--background-color);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+    }
+
+    &__input::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__button {
+        position: relative;
+        width: 200px;
+        height: 50px;
+        padding: 10px 28px;
+    
+        text-align: left;
+        background-color: var(--hover-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        letter-spacing: 0.06em;
+        color: var(--secondary-text-color);
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: absolute;
+        right: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: var(--secondary-text-color);
+    }
+}
