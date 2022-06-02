@@ -8,10 +8,6 @@
     background-position: center;
     background-size: cover;
 
-    @media screen and (max-width: 767px) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-mobile.jpg");
-    }
-
     & .container {
             padding: 200px 15px;
             display: flex;
@@ -30,11 +26,5 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: var(--secondary-text-color);
-
-        @media screen and (max-width: 767px) {
-            font-size: 26px;
-            line-height: 1.62;
-            max-width: 360px;
-        }
     }
 }

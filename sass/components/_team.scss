@@ -4,18 +4,9 @@
     margin: 0 auto;
     background-color: var(--background-third-color);
 
-    @media screen and (max-width: 767px) {
-        padding-bottom: 60px;
-        padding-top: 60px;
-    }
-
     &__list {
             display: flex;
             list-style-type: none;
-
-            @media screen and (max-width: 767px) {
-                    flex-direction: column;
-            }
     }
 
     &__item {
@@ -32,10 +23,6 @@
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
-
-        @media screen and (max-width: 767px) {
-            margin-right: 0;
-        }
     }
 
     &__item:last-child {
@@ -45,10 +32,6 @@
     &__img {
         max-width: 260px;
         margin-bottom: 30px;
-
-        @media screen and (max-width: 767px) {
-            max-width: 450px;
-        }
     }
 
     &__item-title {
