@@ -287,6 +287,7 @@ img {
 
 img {
   display: block;
+  height: auto;
 }
 
 button {
@@ -373,8 +374,8 @@ button {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--hover-color);
@@ -382,10 +383,10 @@ button {
 .logo span {
   color: var(--main-color);
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
   .logo {
-    font-size: 24px;
-    line-height: 1.16;
+    font-size: 26px;
+    line-height: 1.19;
   }
 }
 
@@ -398,13 +399,8 @@ button {
   display: flex;
   align-items: center;
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .header .container {
-    margin: 0;
-  }
-}
 .header__nav {
-  display: flex;
+  display: none;
 }
 .header__logo {
   margin-right: 93px;
@@ -412,11 +408,6 @@ button {
 .header__list {
   display: flex;
   align-self: center;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .header__list {
-    display: none;
-  }
 }
 .header__item {
   list-style-type: none;
@@ -434,15 +425,26 @@ button {
 .header__link:hover, .header__link:focus {
   color: var(--hover-color);
 }
+.header__menu {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+.header__menu .menu-close {
+  display: none;
+}
+.header__menu.is-open .menu-close {
+  display: block;
+}
+.header__menu.is-open .menu-open {
+  display: none;
+}
 
 .address {
-  margin-left: auto;
-  display: flex;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .address {
-    display: none;
-  }
+  display: none;
 }
 .address__link {
   color: var(--secondary-color);
@@ -568,15 +570,44 @@ button {
   fill: var(--secondary-text-color);
 }
 
+.hero {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 200px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-mobile@x1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-mobile@x2.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-tablet@x1.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-tablet@x2.jpg");
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     max-width: 1600px;
-    margin: 0 auto;
-    background-color: var(--background-color);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-desctop@x1.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-desctop@x2.jpg");
   }
 }
 .hero .container {
@@ -595,13 +626,6 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
-}
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .hero__title {
-    font-size: 26px;
-    line-height: 1.61;
-    max-width: 360px;
-  }
 }
 
 .advantage {
