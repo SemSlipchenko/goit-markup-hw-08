@@ -1,5 +1,10 @@
 .whatwedo {
     padding-bottom: 94px;
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
 
     &__list {
             display: flex;

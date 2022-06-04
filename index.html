@@ -33,7 +33,7 @@
                         <use href="./images/icons.svg#icon-smartphone"></use>
                     </svg>+38096 111 11 11</a>
             </div>
-            <button class="header__menu is-open" type="button" data-mobile-menu>
+            <button class="header__menu-mobile is-open" type="button" data-mobile-menu>
                 <svg width="40px" height="40px" aria-label="mobile menu switcher">
                     <use class="menu-open" href="./images/icons.svg#menu-open"></use>
                     <use class="menu-close" href="./images/icons.svg#menu-close"></use>
@@ -46,7 +46,7 @@
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                 <button class="btn" type="submit" data-modal-open>Заказать услугу</button>
         </section>
-        <!-- <section class="advantage">
+        <section class="advantage">
             <div class="container">
                 <ul class="advantage__list">
                     <li class="advantage__item">
@@ -97,17 +97,17 @@
                 <h2 class="whatwedo__title title">Чем мы занимаемся</h2>
                 <ul class="whatwedo__list">
                     <li class="whatwedo__item">
-                        <a class="whatwedo__link" href="#"><img class="whatwedo__img" src="./images/whatwedo1.jpg"
-                                width="370" alt="Что мы делаем"></a>
+                        <a class="whatwedo__link" href="#"><img class="whatwedo__img" srcset="./images/whatwedo1@x1.jpg 1x, ./images/whatwedo1@x2.jpg 2x" src="./images/whatwedo1@x1.jpg"
+                                alt="Что мы делаем"></a>
                         <p class="whatwedo__text">Десктопные приложения</p>
                     </li>
                     <li class="whatwedo__item">
-                        <a class="whatwedo__link" href="#"><img class="whatwedo__img" src="./images/whatwedo2.jpg"
+                        <a class="whatwedo__link" href="#"><img class="whatwedo__img" srcset="./images/whatwedo2@x1.jpg 1x, ./images/whatwedo2@x2.jpg 2x" src="./images/whatwedo2@x1.jpg"
                                 width="370" alt="Что мы делаем"></a>
                         <p class="whatwedo__text">Мобильные приложения</p>
                     </li>
                     <li class="whatwedo__item">
-                        <a class="whatwedo__link" href="#"><img class="whatwedo__img" src="./images/whatwedo3.jpg"
+                        <a class="whatwedo__link" href="#"><img class="whatwedo__img" srcset="./images/whatwedo3@x1.jpg 1x, ./images/whatwedo3@x2.jpg 2x" src="./images/whatwedo3@x1.jpg"
                                 width="370" alt="Что мы делаем"></a>
                         <p class="whatwedo__text">Дизайнерские решения</p>
                     </li>
@@ -119,7 +119,15 @@
                 <h2 class="team__title title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img class="team__img" src="./images/teammember1.jpg" alt="Участник команды">
+                        <picture>
+                            <source srcset="./images/teammember1-desctop@x1.jpg 1x, ./images/teammember1-desctop@x2.jpg 2x"
+                                media="(min-width: 1200px)" type="image/jpeg" />
+                            <source srcset="./images/teammember1-tablet@x1.jpg 1x, ./images/teammember1-tablet@x2.jpg 2x"
+                                media="(min-width: 768px)" type="image/jpeg" />
+                            <source srcset="./images/teammember1-mobile@x1.jpg 1x, ./images/teammember1-mobile@x2.jpg 2x"
+                                type="image/jpeg" />
+                            <img class="team__img" src="./images/teammember1-mobile@x1.jpg" alt="" />
+                        </picture>
                         <h3 class="team__item-title">Игорь Демьяненко</h3>
                         <p class="team__item-text">Product Designer</p>
                         <div class="social">
@@ -269,7 +277,7 @@
                 </ul>
             </div>
         </section>
-        <section class="customers">
+        <!-- <section class="customers">
             <div class="container">
                 <h2 class="customers__title title">Постоянные клиенты</h2>
                 <ul class="customers__list">
