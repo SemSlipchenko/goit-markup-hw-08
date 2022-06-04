@@ -1,13 +1,21 @@
 .footer {
     background-color: var(--background-color);
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     & .container {
             display: flex;
+            flex-direction: column;
+            align-items: center;
     }
-    
+
     &__address {
-        margin-right: 70px;
+        margin-bottom: 60px;
+    }
+
+    &__logo {
+        display: block;
+        text-align: center;
     }
 
     &__logo span {
@@ -29,6 +37,7 @@
     &__link-wrap {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     &__link {
@@ -49,8 +58,8 @@
     }
 
     & .social {
-        margin-right: 93px;
-        padding: 10px 0 0 0;
+
+        margin-bottom: 60px;
 
         &__title {
                 margin-bottom: 20px;
@@ -59,6 +68,7 @@
                 line-height: 1.14;
                 letter-spacing: 0.03em;
                 text-transform: uppercase;
+                text-align: center;
         
                 color: var(--secondary-text-color);
         }
@@ -73,6 +83,9 @@
 
 .mail {
     padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__title {
             margin-bottom: 20px;
@@ -81,15 +94,23 @@
             line-height: 1.14;
             letter-spacing: 0.03em;
             text-transform: uppercase;
+            text-align: center;
     
             color: var(--secondary-text-color);
     }
 
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__input {
+        margin-bottom: 20px;
+        display: block;
         width: 358px;
         height: 50px;
         padding-left: 16px;
-        margin-right: 10px;
     
         color: var(--secondary-text-color);
         background-color: var(--background-color);
