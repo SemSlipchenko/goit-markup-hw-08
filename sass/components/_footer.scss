@@ -7,15 +7,44 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @media screen and (min-width: 1200px) {
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: flex-start;
+            }
+    }
+
+    &__wrap {
+        @media screen and (min-width: 768px) {
+            max-width: 768px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 60px;          
+        }
+
+        @media screen and (min-width: 1200px) {
+            max-width: 1200px;
+            margin-bottom: 0;
+        }
     }
 
     &__address {
         margin-bottom: 60px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0px;
+        }
     }
 
     &__logo {
         display: block;
         text-align: center;
+
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
     }
 
     &__logo span {
@@ -38,6 +67,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            align-items: start;
+        }
     }
 
     &__link {
@@ -61,6 +94,10 @@
 
         margin-bottom: 60px;
 
+        @media screen and (min-width: 768px) {
+                margin-bottom: 0px;
+            }
+
         &__title {
                 margin-bottom: 20px;
         
@@ -71,6 +108,10 @@
                 text-align: center;
         
                 color: var(--secondary-text-color);
+
+                @media screen and (min-width: 1200px) {
+                    text-align: left;
+                }
         }
 
         &__link>&-icon {
@@ -82,7 +123,6 @@
 }
 
 .mail {
-    padding: 10px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,15 +134,22 @@
             line-height: 1.14;
             letter-spacing: 0.03em;
             text-transform: uppercase;
-            text-align: center;
     
             color: var(--secondary-text-color);
+
+            @media screen and (min-width: 1200px) {
+                align-self: flex-start;
+            }
     }
 
     &__form {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media screen and (min-width: 1200px) {
+                flex-direction: row;
+            }
     }
 
     &__input {
@@ -119,6 +166,15 @@
         border-radius: 4px;
         line-height: 1.25;
         letter-spacing: 0.03em;
+
+        @media screen and (max-width: 375px) {
+            max-width: 300px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0;
+            margin-right: 12px;
+        }
     }
 
     &__input::placeholder {

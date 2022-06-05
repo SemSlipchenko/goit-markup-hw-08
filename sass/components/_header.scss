@@ -57,6 +57,20 @@
         width: 40px;
         height: 40px;
         background-color: transparent;
+        
+        & .menu-close, .menu-open {
+            transition: fill var(--transition-data);
+        }
+
+        &:hover .menu-open,
+        &:focus .menu-open {
+            fill: var(--hover-color);
+        }
+
+        &:hover .menu-close,
+        &:focus .menu-close {
+            fill: var(--hover-color);
+        }
 
         @media screen and (min-width: 768px) {
                 display: none;
