@@ -1,0 +1,12 @@
+.mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 796px;
+    padding: 48px;
+    z-index: 2;
+    background-color: var(--background-secondary-color);
+    overflow: hidden;
+}

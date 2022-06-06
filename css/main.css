@@ -320,6 +320,7 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -399,6 +400,7 @@ button {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--hover-color);
+  z-index: 1;
 }
 .logo span {
   color: var(--main-color);
@@ -418,6 +420,7 @@ button {
 .header .container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .header__nav {
   display: none;
@@ -464,6 +467,7 @@ button {
   width: 40px;
   height: 40px;
   background-color: transparent;
+  z-index: 3;
 }
 .header__menu-mobile .menu-close, .header__menu-mobile .menu-open {
   transition: fill var(--transition-data);
@@ -487,6 +491,9 @@ button {
 }
 .header__menu-mobile.is-open .menu-open {
   display: none;
+}
+.header__menu-mobile.is-open + .mobile {
+  display: block;
 }
 
 .address {
@@ -1239,13 +1246,24 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   background-color: var(--background-secondary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform var(--transition-data);
+}
+@media screen and (max-width: 479px) {
+  .modal {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal__btn {
   position: absolute;
@@ -1279,6 +1297,11 @@ button {
 .modal__form .btn {
   margin-top: 30px;
 }
+@media screen and (max-width: 479px) {
+  .modal__form .btn {
+    margin-top: 10px;
+  }
+}
 .modal__title {
   font-weight: 700;
   font-size: 20px;
@@ -1287,6 +1310,11 @@ button {
   letter-spacing: 0.03em;
   color: var(--main-color);
   margin-bottom: 30px;
+}
+@media screen and (max-width: 479px) {
+  .modal__title {
+    font-size: 10px;
+  }
 }
 .modal__field + .modal__field {
   margin-top: 28px;
@@ -1298,7 +1326,7 @@ button {
   border: none;
 }
 .modal__field textarea {
-  width: 448px;
+  width: 370px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1306,6 +1334,16 @@ button {
   padding: 12px 16px;
   cursor: pointer;
   outline: none;
+}
+@media screen and (max-width: 479px) {
+  .modal__field textarea {
+    width: 310px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__field textarea {
+    width: 448px;
+  }
 }
 .modal__field textarea::placeholder {
   font-size: 14px;
@@ -1329,13 +1367,23 @@ button {
   position: relative;
 }
 .modal__input {
-  width: 448px;
+  width: 370px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
   cursor: pointer;
   outline: none;
+}
+@media screen and (max-width: 479px) {
+  .modal__input {
+    width: 310px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__input {
+    width: 448px;
+  }
 }
 .modal__input:hover, .modal__input:focus {
   border: 1px solid var(--hover-color);
@@ -1357,13 +1405,24 @@ button {
 .modal__policy {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
 }
 .modal__policy a {
   color: var(--hover-color);
+}
+@media screen and (max-width: 479px) {
+  .modal__policy {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal__check {
   position: absolute;
@@ -1389,4 +1448,17 @@ button {
   background-repeat: no-repeat;
   background-origin: border-box;
   border: 2px solid transparent;
+}
+
+.mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 796px;
+  padding: 48px;
+  z-index: 2;
+  background-color: var(--background-secondary-color);
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */

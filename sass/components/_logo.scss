@@ -7,6 +7,7 @@
     letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--hover-color);
+    z-index: 1;
 
     & span {
             color: var(--main-color);

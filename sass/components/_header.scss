@@ -6,6 +6,7 @@
     & .container {
             display: flex;
             align-items: center;
+            position: relative;
     }
 
     &__nav {
@@ -57,6 +58,7 @@
         width: 40px;
         height: 40px;
         background-color: transparent;
+        z-index: 3;
         
         & .menu-close, .menu-open {
             transition: fill var(--transition-data);
@@ -86,6 +88,10 @@
 
         &.is-open .menu-open {
             display: none;
+        }
+
+        &.is-open + .mobile {
+            display: block;
         }
     }
 
