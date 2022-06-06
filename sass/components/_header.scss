@@ -91,7 +91,7 @@
         }
 
         &.is-open + .mobile {
-            display: block;
+            display: inline-flex;
         }
     }
 

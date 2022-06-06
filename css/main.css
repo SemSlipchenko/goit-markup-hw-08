@@ -493,7 +493,7 @@ button {
   display: none;
 }
 .header__menu-mobile.is-open + .mobile {
-  display: block;
+  display: inline-flex;
 }
 
 .address {
@@ -1461,4 +1461,97 @@ button {
   z-index: 2;
   background-color: var(--background-secondary-color);
   overflow: hidden;
+  flex-direction: column;
+}
+@media screen and (max-width: 479px) {
+  .mobile {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.mobile__list {
+  margin-bottom: 300px;
+}
+.mobile__item + .mobile__item {
+  margin-top: 32px;
+}
+.mobile__link {
+  color: var(--main-color);
+  font-size: 40px;
+  line-height: 1.17;
+}
+.mobile__link:hover, .mobile__link:focus {
+  color: var(--hover-color);
+}
+.mobile__address-list {
+  margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+}
+.mobile__address-link:first-child {
+  color: var(--hover-color);
+  font-size: 34px;
+  line-height: 1.17;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 479px) {
+  .mobile__address-link:first-child {
+    font-size: 30px;
+  }
+}
+.mobile__address-link {
+  font-size: 24px;
+  line-height: 1.16;
+  color: var(--secondary-color);
+}
+.mobile__social-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 479px) {
+  .mobile__social-list {
+    margin-left: -20px;
+  }
+}
+.mobile__social-item + .mobile__social-item {
+  margin-left: 20px;
+}
+@media screen and (max-width: 479px) {
+  .mobile__social-item {
+    flex-basis: calc(50% - 20px);
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+.mobile__social-item + .mobile__social-item::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  left: -10px;
+  height: 100%;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+@media screen and (max-width: 479px) {
+  .mobile__social-item + .mobile__social-item::before {
+    display: none;
+  }
+}
+.mobile__social-item:first-child::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  left: -10px;
+  height: 100%;
+  border-left: 1px solid transparent;
+}
+@media screen and (max-width: 479px) {
+  .mobile__social-item:first-child::before {
+    display: none;
+  }
+}
+.mobile__social-link {
+  vertical-align: top;
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--hover-color);
 }/*# sourceMappingURL=main.css.map */

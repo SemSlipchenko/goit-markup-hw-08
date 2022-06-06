@@ -7,6 +7,109 @@
     min-height: 796px;
     padding: 48px;
     z-index: 2;
+
     background-color: var(--background-secondary-color);
     overflow: hidden;
+
+    flex-direction: column;
+
+    @media screen and (max-width: 479px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    &__list {
+        margin-bottom: 300px;
+    }
+
+    &__item + &__item {
+        margin-top: 32px;
+    }
+
+    &__link {
+        color: var(--main-color);
+        font-size: 40px;
+        line-height: 1.17;
+
+        &:hover, &:focus {
+            color: var(--hover-color);
+        }
+    }
+
+    &__address-list {
+        margin-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__address-link:first-child {
+        color: var(--hover-color);
+        font-size: 34px;
+        line-height: 1.17;
+        margin-bottom: 32px;
+        
+        @media screen and (max-width: 479px) {
+            font-size: 30px;
+        }
+    }
+
+    &__address-link {
+        font-size: 24px;
+        line-height: 1.16;
+        color: var(--secondary-color);
+    }
+
+    &__social-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 479px) {
+            margin-left: -20px;
+        }
+    }
+
+    &__social-item+&__social-item {
+        margin-left: 20px;
+    }
+
+    &__social-item {
+        @media screen and (max-width: 479px) {
+            flex-basis: calc(100% / 2 - 20px);
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__social-item + &__social-item::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        left: -10px;
+        height: 100%;
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+
+        @media screen and (max-width: 479px) {
+            display: none;
+        }
+    }
+
+    &__social-item:first-child::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        left: -10px;
+        height: 100%;
+        border-left: 1px solid transparent;
+
+        @media screen and (max-width: 479px) {
+            display: none;
+        }
+    }
+
+    &__social-link {
+        vertical-align: top;
+        font-size: 18px;
+        line-height: 1.22;
+        color: var(--hover-color);
+    }
 }
