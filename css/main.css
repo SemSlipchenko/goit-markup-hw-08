@@ -416,11 +416,11 @@ button {
   height: 80px;
   display: flex;
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 .header .container {
   display: flex;
   align-items: center;
-  position: relative;
 }
 .header__nav {
   display: none;

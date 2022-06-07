@@ -2,11 +2,12 @@
     height: 80px;
     display: flex;
     border-bottom: 1px solid #ECECEC;
+    position: relative;
 
     & .container {
             display: flex;
             align-items: center;
-            position: relative;
+            // position: relative;
     }
 
     &__nav {
