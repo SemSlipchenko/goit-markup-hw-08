@@ -4,14 +4,17 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 796px;
+    min-height: 100%;
+    max-height: 100%;
     padding: 48px;
     z-index: 2;
-
     background-color: var(--background-secondary-color);
-    overflow: hidden;
-
+    overflow: scroll;
     flex-direction: column;
+
+    &.is-open {
+        display: inline-flex;
+    }
 
     @media screen and (max-width: 479px) {
         padding-left: 24px;

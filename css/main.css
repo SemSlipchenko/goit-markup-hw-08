@@ -391,6 +391,10 @@ button {
   background-color: var(--second-icon-color);
 }
 
+.overflowhidden {
+  overflow: hidden;
+}
+
 .logo {
   font-family: "Raleway";
   font-style: normal;
@@ -470,6 +474,7 @@ button {
   z-index: 3;
 }
 .header__menu-mobile .menu-close, .header__menu-mobile .menu-open {
+  fill: var(--main-color);
   transition: fill var(--transition-data);
 }
 .header__menu-mobile:hover .menu-open, .header__menu-mobile:focus .menu-open {
@@ -491,9 +496,6 @@ button {
 }
 .header__menu-mobile.is-open .menu-open {
   display: none;
-}
-.header__menu-mobile.is-open + .mobile {
-  display: inline-flex;
 }
 
 .address {
@@ -1281,6 +1283,7 @@ button {
   width: 450px;
   height: 609px;
   padding: 40px;
+  z-index: 4;
   background-color: var(--background-secondary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1488,12 +1491,16 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 796px;
+  min-height: 100%;
+  max-height: 100%;
   padding: 48px;
   z-index: 2;
   background-color: var(--background-secondary-color);
-  overflow: hidden;
+  overflow: scroll;
   flex-direction: column;
+}
+.mobile.is-open {
+  display: inline-flex;
 }
 @media screen and (max-width: 479px) {
   .mobile {
