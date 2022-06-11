@@ -14,7 +14,8 @@
 
     &__item {
         list-style-type: none;
-        border: 1px solid #EEEEEE;
+        display: flex;
+        flex-direction: column;
         background-color: var(--background-secondary-color);
         max-width: 450px;
         margin-bottom: 30px;
@@ -80,6 +81,8 @@
     &__description {
         width: 100%;
         padding: 20px 24px;
+        border: 1px solid #EEEEEE;
+        flex-grow: 1;
     }
 
     &__title {

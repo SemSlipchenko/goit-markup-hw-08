@@ -16,6 +16,8 @@
     }
 
     &__wrap {
+        margin-bottom: 60px;
+
         @media screen and (min-width: 768px) {
             max-width: 768px;
             width: 100%;
@@ -91,9 +93,6 @@
     }
 
     & .social {
-
-        margin-bottom: 60px;
-
         @media screen and (min-width: 768px) {
                 margin-bottom: 0px;
             }

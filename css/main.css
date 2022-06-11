@@ -560,6 +560,9 @@ button {
     align-items: flex-start;
   }
 }
+.footer__wrap {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) {
   .footer__wrap {
     max-width: 768px;
@@ -627,9 +630,6 @@ button {
 }
 .footer__link:hover, .footer__link:focus {
   color: var(--hover-color);
-}
-.footer .social {
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer .social {
@@ -961,11 +961,7 @@ button {
   }
 }
 .team__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 450px;
-  padding-bottom: 24px;
   margin-bottom: 30px;
   background-color: var(--background-secondary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1001,9 +997,12 @@ button {
     width: 100%;
   }
 }
+.team__item-wrap {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
 .team__img {
   max-width: 100%;
-  margin-bottom: 30px;
 }
 .team__item-title {
   margin-bottom: 10px;
@@ -1027,6 +1026,7 @@ button {
 .social__list {
   display: flex;
   list-style-type: none;
+  justify-content: center;
 }
 .social__item {
   display: flex;
@@ -1142,6 +1142,12 @@ button {
 .portfolio__item {
   list-style-type: none;
   margin-right: 8px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    margin-bottom: 0;
+  }
 }
 .portfolio__item:last-child {
   margin-right: 0;
@@ -1183,7 +1189,8 @@ button {
 }
 .card__item {
   list-style-type: none;
-  border: 1px solid #EEEEEE;
+  display: flex;
+  flex-direction: column;
   background-color: var(--background-secondary-color);
   max-width: 450px;
   margin-bottom: 30px;
@@ -1241,6 +1248,8 @@ button {
 .card__description {
   width: 100%;
   padding: 20px 24px;
+  border: 1px solid #EEEEEE;
+  flex-grow: 1;
 }
 .card__title {
   margin-bottom: 4px;
